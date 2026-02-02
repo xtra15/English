@@ -12,7 +12,7 @@
       --text-main: #ffffff;
       --text-muted: #a1a1aa;
       --border: rgba(255, 255, 255, 0.1);
-      --card-bg: rgba(20, 20, 20, 0.7); /* Slightly darker for better TV contrast */
+      --card-bg: rgba(20, 20, 20, 0.7);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,7 +22,7 @@
       color: var(--text-main);
       font-family: 'Inter', sans-serif;
       overflow: hidden;
-      font-size: 20px; /* Base size increased for TV */
+      font-size: 20px;
     }
 
     /* BACKGROUND */
@@ -33,7 +33,7 @@
       background-image: 
         linear-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 2px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
-      background-size: 60px 60px; /* Bigger grid */
+      background-size: 60px 60px;
     }
     .background-layer::after {
       content: '';
@@ -60,18 +60,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 1rem; /* Reduced padding to let card grow */
+      padding: 1rem;
       perspective: 1000px;
     }
 
-    /* --- GIANT GLASS CARD --- */
+    /* GIANT GLASS CARD */
     .glass-card {
       background: var(--card-bg);
       backdrop-filter: blur(15px);
       border: 1px solid var(--border);
       border-radius: 30px;
-      padding: 4rem; /* Big internal padding */
-      max-width: 1600px; /* Much wider for TV */
+      padding: 4rem;
+      max-width: 1600px;
       width: 95%;
       box-shadow: 0 30px 60px rgba(0,0,0,0.6);
       
@@ -87,7 +87,7 @@
       transform: scale(1) translateY(0);
     }
 
-    /* --- MASSIVE TYPOGRAPHY --- */
+    /* TYPOGRAPHY */
     h1 { font-size: 7rem; font-weight: 800; letter-spacing: -3px; margin: 0; text-align: center; line-height: 1.1; }
     h2 { font-size: 3.5rem; font-weight: 700; margin-bottom: 2rem; color: #fff; border-bottom: 2px solid var(--border); padding-bottom: 15px; display: inline-block; }
     p { font-size: 1.5rem; color: var(--text-muted); line-height: 1.6; }
@@ -103,7 +103,7 @@
     .dream-job { font-size: 1.8rem; color: #fff; font-weight: 500; display: flex; align-items: center; gap: 12px; }
     .dream-job::before { content: '▹'; color: var(--accent); font-size: 2rem; }
 
-    /* SLIDE 3: PREFERENCES (3 Columns) */
+    /* SLIDE 3: PREFERENCES */
     .comparison-container { 
       display: grid; 
       grid-template-columns: 1fr 1fr 1fr; 
@@ -140,7 +140,7 @@
     }
     .mini-hobby img {
       width: 100%;
-      height: 120px; /* Taller images */
+      height: 120px;
       object-fit: cover;
       display: block;
       transition: transform 0.3s;
@@ -170,7 +170,7 @@
     .friend-name { font-weight: 700; font-size: 1.6rem; color: #fff; }
     .friend-desc { font-size: 1.4rem; color: var(--text-muted); line-height: 1.5; flex: 1; }
 
-    /* Helper for small screens (Fall back) */
+    /* Mobile Fallback */
     @media (max-width: 1000px) {
       h1 { font-size: 4rem; }
       h2 { font-size: 2.5rem; }
@@ -271,21 +271,21 @@
           
           <div class="friend-row top">
             <div class="friend-visual">
-              <img src="https://picsum.photos/200/200?random=1" alt="Friend" class="avatar">
-              <div class="friend-name">Friend 1</div>
+              <img src="imagefolder/iman.jpg" alt="Iman" class="avatar">
+              <div class="friend-name">Iman</div>
             </div>
             <div class="friend-desc">
-              The carry of the team. Always reliable when we need a win. Good at strategy and keeping cool under pressure.
+              My friend since middle school. We always used to play Roblox together.
             </div>
           </div>
 
           <div class="friend-row bottom">
             <div class="friend-desc">
-              The wildcard. Brings the chaos and the laughs. Always trying new things and keeping the squad entertained.
+              Shorter than me. We used to play Duo in Mobile Legends, and I liked to tease him about his crush in middle school.
             </div>
             <div class="friend-visual">
-              <img src="https://picsum.photos/200/200?random=2" alt="Friend" class="avatar">
-              <div class="friend-name">Friend 2</div>
+              <img src="imagefolder/saif.jpg" alt="Saif" class="avatar">
+              <div class="friend-name">Saif</div>
             </div>
           </div>
 
@@ -312,7 +312,7 @@
     slides.forEach(slide => observer.observe(slide));
 
 
-    // 2. KEYBOARD NAVIGATION (UP/DOWN ARROWS)
+    // 2. KEYBOARD NAVIGATION
     window.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault(); 
